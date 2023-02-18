@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "lato";
+  font-family:  "lato";
   src: url("./lato.ttf") format("truetype");
 }
 
 body {
-  font-family: Manrope, lato;
+  font-family: Manrope, lato, roboto, tahoma;
   font-weight: 800;
   background-color: #1f2632;
 }
