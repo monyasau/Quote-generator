@@ -21,11 +21,11 @@ body {
 .quoteLabel {
   font-size: 13px;
   font-weight: 200;
-  color: #52ffa8;
+  color: #babbbb;
   padding: 40px 0;
   text-align: center;
 }
-.quote {
+.quoteCont {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -34,14 +34,26 @@ body {
   color: #cee3e9;
   font-size: 28px;
 }
+#author{
+  color: #babbbb;
+  font-size: 16px;
+}
 .pattern {
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: 30%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-
+#btn {
+  cursor: pointer;
+  background-color: transparent;
+  border-style: dashed;
+  border-color: #1f2632;
+  padding: 10px 30px;
+  color: #bcc5c7;
+  margin-top: 15px;
+}
 /* @media screen and (min-width: 00px) {
   .card{
 width: 90%;
@@ -57,5 +69,8 @@ width: 90%;
   }
   .pattern {
     margin-bottom: 0;
+  }
+  .quoteLabel{
+    padding-bottom: 20px;
   }
 }
