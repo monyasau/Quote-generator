@@ -66,3 +66,22 @@ const addNewPreviousQuote = (quote) => {
   //   // Show the overlay window
   overlay.classList.add("show");
 };
+
+const openOverlay = () => {
+  let overlayContents = document.getElementById("overlayContents");
+  if (previousQuotes.length > 0) {
+    const quoteElements = previousQuotes.map((quote) => {
+      return `<p>"${quote.content}" - ${quote.author}</p>`;
+    });
+    overlayContents.innerHTML = quoteElements.join("");
+  } else {
+    // // If previousQuotes is empty, display a message
+    overlayContents.innerText = "No previous quotes";
+  }
+
+  overlay.className = "show";
+};
+
+const closeOverlay = () => {
+  overlay.className = "hide";
+};
