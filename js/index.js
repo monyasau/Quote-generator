@@ -85,3 +85,32 @@ const openOverlay = () => {
 const closeOverlay = () => {
   overlay.className = "hide";
 };
+const getQuote = () => {
+  quoteContainer.innerText = "Loading...";
+  fetch("https://api.quotable.io/random")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(
+          "Failed to fetch quote - check your internet connection"
+        );
+      }
+      return response.json();
+    })
+    .then((fetchResult) => {
+      quoteContainer.innerText = `"${fetchResult.content}"`;
+      author.innerText = `- ${fetchResult.author}`;
+      addNewPreviousQuote(fetchResult);
+      // previousQuotes.push(`"${fetchResult.content}" - ${fetchResult.author}`);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+openOverlayButton = document.getElementById("openOverlayButton");
+
+openOverlayButton.addEventListener("click", openOverlay);
+
+closeOverlayButton.addEventListener("click", closeOverlay);
+
+button.addEventListener("click", getQuote);
