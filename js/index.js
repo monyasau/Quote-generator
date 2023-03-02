@@ -53,3 +53,16 @@ fetch("https://api.quotable.io/random")
   })
 
 
+const addNewPreviousQuote = (quote) => {
+  previousQuotes.push(quote);
+
+  const quoteElements = previousQuotes.map((quote) => {
+    return `<p>"${quote.content}" - ${quote.author}</p>`;
+  });
+
+  //   // Set the overlayContents HTML to the joined quoteElements array
+  overlayContents.innerHTML = quoteElements.join("");
+
+  //   // Show the overlay window
+  overlay.classList.add("show");
+};
