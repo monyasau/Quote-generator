@@ -11,6 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
+    <style>
+      
+    </style>
     <link rel="stylesheet" href="./style/main.css" />
     <title>Quote Generator - Lanre</title>
   </head>
@@ -18,16 +21,58 @@
     <div class="card">
       <div class="quoteLabel">QUOTE&ThickSpace; GENERATOR</div>
       <div class="quoteCont">
+        <!-- <div class="dropdown">
+  <button class="dropbtn">Options &#9660;</button>
+  <div class="dropdown-content">
+    <a href="#">Share</a>
+    <a href="#">Save</a>
+    <a href="#">Report</a>
+  </div>
+</div> -->
         <div id="quote">
           <!-- "It is easy to sit up and take notice, what's difficult is getting up
           and taking action." -->
         </div>
         <div id="author"></div>
-        <div><button id="btn">New / Next Quote</button></div>
+        <div><button id="btn" onclick="getQuote()">New / Next Quote</button></div>
 
         <img class="pattern" src="./Assets/pattern-mobile.svg" alt="" />
       </div>
     </div>
+
     <script src="./js/index.js"></script>
+    <!-- Hidden overlay window -->
+<div id="overlay" class="">
+  <div class="overlay-content">
+    <h2>Overlay Window</h2>
+    <p id="overlayContents"></p>
+    <button id="closeOverlayBtn" onclick="closeOverlay()">Close</button>
+  </div>
+</div>
+
+<!-- Button to open the overlay window -->
+<button id="openOverlayBtn" onclick="openOverlay()">Previous Quotes</button>
+
+<!-- <script>
+  
+
+  // let  overlay = document.getElementById("overlay");
+  // let openOverlayButton = document.getElementById("openOverlay");
+  // let closeOverlayButton = document.getElementById("closeOverlay");
+
+  
+  // openOverlayButton.addEventListener("click", () => {
+  //   overlay.classList.add("show");
+  // });
+
+  
+  // closeOverlayButton.addEventListener("click", () => {
+  //   overlay.classList.remove("show");
+  // });
+</script> -->
   </body>
 </html>
+
+
+
+
